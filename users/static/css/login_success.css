@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.success-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.action-btn {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.create-btn {
+    background-color: #28a745;
+}
+
+.create-btn:hover {
+    background-color: #218838;
+}
+
+.display-btn {
+    background-color: #007bff;
+}
+
+.display-btn:hover {
+    background-color: #0056b3;
+}
+
+.update-btn {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.logout-btn {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+@media (min-width: 768px) {
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

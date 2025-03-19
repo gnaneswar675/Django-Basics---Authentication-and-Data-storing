@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_success.css' %}">
+</head>
+<body>
+    <div class="success-container">
+        <h2>Login Successful!</h2>
+        <p>Welcome to the website.</p>
+        <div class="button-container">
+            <a href="{% url 'create_student' %}" class="action-btn create-btn">Create Student</a>
+            <a href="{% url 'student_list' %}" class="action-btn display-btn">Display Data</a>
+            <a href="{% url 'update_student' %}" class="action-btn update-btn">Update Student</a>
+        </div>
+        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>

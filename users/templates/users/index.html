@@ -1,0 +1,295 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          Student Management System
+        </a>
+        
+        <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="{% url 'home' %}">Login</a></li>
+</ul>
+        
+        <div class="auth-buttons">
+    <a href="{% url 'home' %}" class="btn btn-login">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <a href="{% url 'register' %}" class="btn btn-register">
+        <i class="fas fa-user-plus"></i> Register
+    </a>
+</div>
+        
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Modern <span>Student Management</span> for Modern Educators</h1>
+          <p class="hero-description">Streamline your administrative tasks, enhance student engagement, and improve educational outcomes with our comprehensive student management platform.</p>
+          
+          <div class="hero-buttons">
+    <a href="{% url 'register' %}" class="btn btn-register">
+        <i class="fas fa-rocket"></i> Get Started Free
+    </a>
+    <a href="{% url 'home' %}" class="btn btn-login">
+        <i class="fas fa-sign-in-alt"></i> Login Now
+    </a>
+</div>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">15K+</div>
+              <div class="stat-label">Schools</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">200K+</div>
+              <div class="stat-label">Teachers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5M+</div>
+              <div class="stat-label">Students</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="{% static 'images/dashboard.png' %}" alt="Student Management System Dashboard">
+          
+          <div class="floating-card card-1">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-text">
+              <p>Attendance rate <span class="highlight">+12%</span></p>
+            </div>
+          </div>
+          
+          <div class="floating-card card-2">
+            <div class="card-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-text">
+              <p>Save <span class="highlight">5hrs/week</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Key Features</p>
+        <h2 class="section-title">Powerful Tools for Educational Excellence</h2>
+        <p class="section-description">Discover how Student Management System transforms educational management with these powerful features.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3 class="feature-title">Student Analytics</h3>
+          <p class="feature-description">Track individual and class performance with intuitive data visualization and actionable insights.</p>
+          <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3 class="feature-title">Assignment Management</h3>
+          <p class="feature-description">Create, distribute, and grade assignments digitally. Provide feedback and track submission status effortlessly.</p>
+          <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="feature-title">Parent Communication</h3>
+          <p class="feature-description">Connect with parents through secure messaging, automated updates, and scheduled conferences.</p>
+          <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works section -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Simple Process</p>
+        <h2 class="section-title">How Student Management System Works</h2>
+        <p class="section-description">Getting started is simple. Follow these steps to transform your classroom management.</p>
+      </div>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Create Account</h3>
+          <p class="step-description">Sign up for free and set up your school and classroom profiles.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Import Data</h3>
+          <p class="step-description">Easily import student records or add them manually. No technical skills required.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Customize Settings</h3>
+          <p class="step-description">Configure grading scales, attendance policies, and communication preferences.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Start Managing</h3>
+          <p class="step-description">Begin tracking attendance, creating assignments, and communicating with stakeholders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Success Stories</p>
+        <h2 class="section-title">What Educators Are Saying</h2>
+        <p class="section-description">Hear from teachers and administrators who have transformed their educational approach with ScholarSync.</p>
+      </div>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-content">Student Management System has revolutionized the way I manage my classroom. I spend less time on paperwork and more time actually teaching. The analytics feature has helped me identify struggling students earlier.</p>
+          <div class="testimonial-author">
+            <img src="{% static 'images/p1.jpg' %}" alt="Sarah Johnson" class="author-avatar">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>High School Science Teacher</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-content">As a principal, I've seen a significant improvement in teacher productivity and parent engagement since implementing ScholarSync. The comprehensive reporting makes district-level reporting so much easier.</p>
+          <div class="testimonial-author">
+            <img src="{% static 'images/p2.jpg' %}" alt="Michael Chen" class="author-avatar">
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>Elementary School Principal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA section -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta-title">Ready to Transform Your Educational Management?</h2>
+      <p class="cta-description">Join thousands of educators who have already made the switch to Student Management System. Start your free trial today and see the difference.</p>
+      <div class="cta-buttons">
+    <a href="{% url 'register' %}" class="btn btn-white">
+        Get Started Free
+    </a>
+    <a href="{% url 'home' %}" class="btn btn-outline-white">
+        Login Now
+    </a>
+</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="#" class="footer-logo">
+            <i class="fas fa-graduation-cap"></i>
+            Student Management System
+          </a>
+          <p class="footer-about">Student Management System is a modern student management system designed to streamline administrative tasks and enhance student engagement.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>1234 Education St, Suite 100, Learning City, ED 56789</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>(123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@studentmanagementsystem.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <p class="copyright">© 2023 Student Management System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

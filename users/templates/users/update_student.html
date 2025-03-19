@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/update_student.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Update Student Details</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="student">Select Student:</label>
+                <select name="student_id" id="student" required>
+                    {% for student in students %}
+                        <option value="{{ student.id }}">{{ student.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+        <a href="{% url 'login_success' %}" class="back-btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>
