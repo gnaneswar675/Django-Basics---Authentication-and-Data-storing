@@ -84,4 +84,3 @@ def update_student(request):
 
 def index(request):
     return render(request, 'users/index.html')
-
