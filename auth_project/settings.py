@@ -21,15 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ycp@2sqb(4w&05t11ujq6jx1xj34g(m7m7g_y_r^664vcu_f(f'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-basics-authentication-and-data.onrender.com']
 
-
-
+CSRF_TRUSTED_ORIGINS = ['https://django-basics-authentication-and-data.onrender.com']
 
 
 # Application definition
@@ -123,6 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'users', 'static'),
 ]
