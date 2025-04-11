@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'users.onrender.com', 'users-u38l.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://users-u38l.onrender.com', 'https://users.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 
 # Application definition
